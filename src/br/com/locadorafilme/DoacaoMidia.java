@@ -1,6 +1,9 @@
 package br.com.locadorafilme;
 
 public class DoacaoMidia {
+    public static void main(String[] args) {
+        System.out.println("Hello!");
+    }
 }
 
 
