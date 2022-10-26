@@ -15,7 +15,6 @@ public abstract class Midia {
         this.nome = nome;
     }
 
-
     public String getCodigo() {
         return codigo;
     }
@@ -42,11 +41,10 @@ public abstract class Midia {
 
     @Override
     public String toString() {
-        return "Midia {" +
-                "codigo='" + codigo + '\'' +
-                ", preco=" + preco +
-                ", nome='" + nome + '\'' +
-                '}';
+        return "***Mídia*** " +
+                "\nCódigo = " + codigo +
+                "\nPreço = " + preco +
+                "\nNome = " + nome;
     }
 }
 

@@ -2,7 +2,15 @@ package br.com.locadorafilme;
 
 public class DoacaoMidia {
     public static void main(String[] args) {
-        System.out.println("Hello!");
+
+        Dvd dvdPlayer = new Dvd("001",12.00,"Divertidamente","Inglês",
+                true,"Português");
+
+
+        System.out.println(dvdPlayer);
+        dvdPlayer.darPlay();
+        dvdPlayer.legenda(true, dvdPlayer.getIdioma());
+        dvdPlayer.legenda(true);
     }
 }
 
