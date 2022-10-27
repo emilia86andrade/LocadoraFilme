@@ -3,14 +3,29 @@ package br.com.locadorafilme;
 public class DoacaoMidia {
     public static void main(String[] args) {
 
-        Dvd dvdPlayer = new Dvd("001",12.00,"Divertidamente","Inglês",
-                true,"Português");
+        Dvd dvdPlayer = new Dvd("001", 12.00, "Divertidamente", "Inglês",
+                true, "Português");
 
 
         System.out.println(dvdPlayer);
         dvdPlayer.darPlay();
         dvdPlayer.legenda(true, dvdPlayer.getIdioma());
         dvdPlayer.legenda(true);
+
+        Midia cd = new Cd(
+                "002",
+                10.00,
+                "As Quatro Estações",
+                "Sandy & Junior",
+                14
+                );
+
+
+
+        System.out.println(cd);
+        cd.darPlay();
+
+
     }
 }
 

@@ -5,9 +5,6 @@ public abstract class Midia {
     private Double preco;
     private String nome;
 
-    public void darPlay() {
-        System.out.println("Dando o play na mídia " + getNome());
-    }
 
     public Midia(String codigo, Double preco, String nome) {
         this.codigo = codigo;
@@ -37,6 +34,10 @@ public abstract class Midia {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void darPlay() {
+        System.out.println("Dando o play na mídia " + getNome());
     }
 
     @Override
