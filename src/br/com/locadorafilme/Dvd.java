@@ -47,7 +47,7 @@ public class Dvd extends Midia {
         } else {
             System.out.println("O DVD está sem legenda.");
         }
-    return false;
+        return false;
     }
 
     public boolean legenda(Boolean ligarDesligar) {

@@ -1,6 +1,6 @@
 package br.com.locadorafilme;
 
-public class Cd extends Midia{
+public class Cd extends Midia {
     private String artista;
     private int quantidadeFaixas;
 
@@ -34,7 +34,7 @@ public class Cd extends Midia{
     @Override
     public String toString() {
         return super.toString() +
-                "\nArtista = " + artista  +
+                "\nArtista = " + artista +
                 "\nQuantidade de Faixas = " + quantidadeFaixas;
     }
 }

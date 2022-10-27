@@ -6,7 +6,7 @@ public class DoacaoMidia {
         Dvd dvdPlayer = new Dvd("001", 12.00, "Divertidamente", "Inglês",
                 true, "Português");
 
-        Midia cd = new Cd("002",10.00,"As Quatro Estações","Sandy & Junior",14);
+        Midia cd = new Cd("002", 10.00, "As Quatro Estações", "Sandy & Junior", 14);
 
         //printando os objetos com Override
         System.out.println(dvdPlayer);
@@ -17,20 +17,17 @@ public class DoacaoMidia {
         cd.darPlay();
 
         //printando os métodos com mesmo nomes
-        dvdPlayer.legenda(true, dvdPlayer.getIdiomaLegenda());
-        dvdPlayer.legenda(true);
+        //dvdPlayer.legenda(true, dvdPlayer.getIdiomaLegenda());
+        //dvdPlayer.legenda(true);
 
-
-        //assistirFilme(dvdPlayer);
+        //chamando o métodp assistirFilme
+        assistirFilme(dvdPlayer);
 
     }
 
-    public static void assistirFilme(Dvd dvd){
-        //dvd.legenda(true,"Inglês");
-       // System.out.println(dvd.getIdioma());
-        //dvd.legenda(true);
-        //System.out.println(dvd.);
-
+    public static void assistirFilme(Dvd dvd) {
+        dvd.legenda(dvd.getPossuiLegenda(), dvd.getIdioma());
+        dvd.legenda(dvd.getPossuiLegenda());
     }
 }
 
