@@ -5,7 +5,6 @@ public abstract class Midia {
     private Double preco;
     private String nome;
 
-
     public Midia(String codigo, Double preco, String nome) {
         this.codigo = codigo;
         this.preco = preco;

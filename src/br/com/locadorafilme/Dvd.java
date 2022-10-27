@@ -1,15 +1,9 @@
 package br.com.locadorafilme;
 
-public class Dvd extends Midia{
+public class Dvd extends Midia {
     private String idioma;
     private Boolean possuiLegenda;
     private String idiomaLegenda;
-
-    @Override
-    public void darPlay() {
-        super.darPlay();
-        System.out.println("Filme " + getNome() + " iniciado.");
-    }
 
     public Dvd(String codigo, Double preco, String nome, String idioma, Boolean possuiLegenda, String idiomaLegenda) {
         super(codigo, preco, nome);
@@ -42,21 +36,27 @@ public class Dvd extends Midia{
         this.idiomaLegenda = idiomaLegenda;
     }
 
-    public void legenda(Boolean ligar, String idioma){
-        if(ligar == true){
-            setIdiomaLegenda(getIdiomaLegenda());
-            System.out.println("A legenda está em " + getIdiomaLegenda() + ".");
+    @Override
+    public void darPlay() {
+        System.out.println("Filme " + getNome() + " iniciado.");
+    }
+
+    public boolean legenda(Boolean ligar, String idioma) {
+        if (ligar == true && getPossuiLegenda() == true) {
+            System.out.println("O idioma da legenda foi atualizado para " + getIdiomaLegenda() + ".");
         } else {
             System.out.println("O DVD está sem legenda.");
         }
+    return false;
     }
 
-    public void legenda(Boolean ligarDesligar){
-        if(getPossuiLegenda() == true){
+    public boolean legenda(Boolean ligarDesligar) {
+        if (getPossuiLegenda() == true && ligarDesligar == true) {
             System.out.println("A legenda está ligada.");
-        }else{
+        } else {
             System.out.println("A legenda está desligada.");
         }
+        return true;
     }
 
     @Override
