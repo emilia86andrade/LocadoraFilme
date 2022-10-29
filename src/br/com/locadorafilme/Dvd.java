@@ -41,22 +41,22 @@ public class Dvd extends Midia {
         System.out.println("Filme " + getNome() + " iniciado.");
     }
 
-    public boolean legenda(Boolean ligar, String idioma) {
-        if (ligar == true && getPossuiLegenda() == true) {
-            System.out.println("O idioma da legenda foi atualizado para " + getIdiomaLegenda() + ".");
-        } else {
-            System.out.println("O DVD está sem legenda.");
+    public void legenda(Boolean ligar, String idioma) {
+        setIdiomaLegenda(idioma);
+        System.out.println("O idioma da legenda foi atualizado para " + getIdiomaLegenda() + ".");
+        if (ligar) {
+            setPossuiLegenda(ligar);
+            System.out.println("A legenda foi ligada.");
         }
-        return false;
     }
 
-    public boolean legenda(Boolean ligarDesligar) {
-        if (getPossuiLegenda() == true && ligarDesligar == true) {
+    public void legenda(Boolean ligarDesligar) {
+        setPossuiLegenda(ligarDesligar);
+        if (ligarDesligar) {
             System.out.println("A legenda está ligada.");
         } else {
             System.out.println("A legenda está desligada.");
         }
-        return true;
     }
 
     @Override
@@ -64,26 +64,6 @@ public class Dvd extends Midia {
         return super.toString() +
                 "\nIdioma = " + idioma +
                 "\nPossui Legenda = " + possuiLegenda +
-                "\nIdioma da Legenda = " + idiomaLegenda;
+                "\nIdioma da Legenda = " + idiomaLegenda + "\n";
     }
 }
-
-
-
-
-
-/*
-Atributos:
-
-idioma : String
-possuiLegenda : boolean
-idiomaLegenda : String
-Métodos
-
-sobrescrever darPlay(): exibir a mensagem "filme iniciado"
-construtor(todos os argumentos)
-get() e set()
-legenda(boolean ligar, String idioma) : liga a legenda e atualiza o idioma da legenda
-legenda(boolean ligarDesligar) : apenas atualiza a variável possuiLegenda
-
- */
